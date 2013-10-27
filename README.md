@@ -17,8 +17,14 @@ $ vagrant up
 
 ```
 
-3.- Access your VM via drupal8.dev
+3.- Access your VM via http://drupal8.dev
 
+#### Tools on vm
+* composer
+* drush for drupal 8
+* drupal 8 code on www/drupal8.dev
+* xdebug
+* vim
 
 ===
 
