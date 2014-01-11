@@ -9,9 +9,14 @@ ID="unknown"
 CODENAME="unknown"
 RELEASE="unknown"
 
-if [ "$OS" == "Linux" ]; then
+if [ "${OS}" == "Linux" ]; then
+    # detect centos
+    grep "centos" /etc/issue -i -q
+    if [ $? = '0' ]; then
+        ID="centos"
+        RELEASE=$(cat /etc/redhat-release | grep -o 'release [0-9]' | cut -d " " -f2)
     # could be debian or ubuntu
-    if [ $(which lsb_release) ]; then
+    elif [ $(which lsb_release) ]; then
         ID=$(lsb_release -i | cut -f2)
         CODENAME=$(lsb_release -c | cut -f2)
         RELEASE=$(lsb_release -r | cut -f2)
@@ -31,12 +36,12 @@ fi
 
 declare -A info
 
-info[id]=$(echo "$ID" | tr '[A-Z]' '[a-z]')
-info[codename]=$(echo "$CODENAME" | tr '[A-Z]' '[a-z]')
-info[release]=$(echo "$RELEASE" | tr '[A-Z]' '[a-z]')
+info[id]=$(echo "${ID}" | tr '[A-Z]' '[a-z]')
+info[codename]=$(echo "${CODENAME}" | tr '[A-Z]' '[a-z]')
+info[release]=$(echo "${RELEASE}" | tr '[A-Z]' '[a-z]')
 
 if [ "$TYPE" ] ; then 
-    echo "${info[$TYPE]}"
+    echo "${info[${TYPE}]}"
 else 
     echo -e "ID\t${info[id]}"
     echo -e "CODENAME\t${info[codename]}"

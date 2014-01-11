@@ -1,7 +1,7 @@
 drupal8.dev
 ===========
 
-Vagrant machine for drupal 8
+Vagrant machine for drupal 8 (VirtualBox 4.3)
 
 1.- Clone this repo
 ```bash
