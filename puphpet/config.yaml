@@ -68,8 +68,8 @@ apache:
             port: '80'
             override:
                 - All
-    user: www-data
-    group: www-data
+    user: vagrant
+    group: vagrant
     default_vhost: true
     mpm_module: prefork
     mod_pagespeed: 0
