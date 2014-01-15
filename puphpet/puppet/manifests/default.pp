@@ -670,9 +670,9 @@ exec { 'public_html':
 
 }
 
-exec { 'drupal8':
-  path      => '/usr/bin',
-  command   => 'git clone --branch 8.x http://git.drupal.org/project/drupal.git /var/www/drupal8.dev',
-  creates   => '/var/www/drupal8.dev',
-  logoutput => true
-}
+#exec { 'drupal8':
+#  path      => '/usr/bin',
+#  command   => 'git clone --branch 8.x http://git.drupal.org/project/drupal.git /var/www/drupal8.dev',
+#  creates   => '/var/www/drupal8.dev',
+#  logoutput => true
+#}
