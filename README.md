@@ -39,3 +39,6 @@ $ git clone --branch 8.x http://git.drupal.org/project/drupal.git drupal8.dev
 * User: drupal
 * Pass: drupal
 
+#### Minimum requirements
+* VirtualBox 4.3.x
+* Vagrant 1.4.x
