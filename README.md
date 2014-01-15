@@ -34,9 +34,8 @@ $ git clone --branch 8.x http://git.drupal.org/project/drupal.git drupal8.dev
 * xdebug
 * vim
 
-===
+#### Database Credentials
+* Name: drupal
+* User: drupal
+* Pass: drupal
 
-
-        Username: drupal
-        Password: drupal
-        db name: drupal
