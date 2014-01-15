@@ -30,7 +30,6 @@ $ git clone --branch 8.x http://git.drupal.org/project/drupal.git drupal8.dev
 #### Tools on vm
 * composer
 * drush for drupal 8
-* drupal 8 code on www/drupal8.dev
 * xdebug
 * vim
 
