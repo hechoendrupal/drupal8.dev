@@ -669,12 +669,18 @@ exec { 'public_html':
   creates => '/home/vagrant/public_html'
 }
 
-exec { 'composer-install-drush':
-  user    => 'root',
-  group   => 'root',
-  path => '/usr/local/bin',
-  command => 'composer install -d /usr/share/drush',
-  creates => '/usr/share/drush/vendor'
+#exec { 'composer-install-drush':
+#  user    => 'root',
+#  group   => 'root',
+#  path => ['/usr/local/bin', '/usr/bin'],
+#  command => 'composer install -d /usr/share/drush',
+#  creates => '/usr/share/drush/vendor'
+#}
+
+composer::exec { 'composer-install-drush':
+  cmd  => 'install',
+  cwd  => '/usr/share/drush',
+  user => 'root'
 }
 
 #exec { 'drupal8':
