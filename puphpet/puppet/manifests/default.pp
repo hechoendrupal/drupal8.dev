@@ -667,12 +667,11 @@ exec { 'public_html':
   path    => '/bin',
   command => 'ln -s /var/www/ /home/vagrant/public_html',
   creates => '/home/vagrant/public_html'
-
 }
 
-#exec { 'drupal8':
-#  path      => '/usr/bin',
-#  command   => 'git clone --branch 8.x http://git.drupal.org/project/drupal.git /var/www/drupal8.dev',
-#  creates   => '/var/www/drupal8.dev',
-#  logoutput => true
-#}
+composer::exec { 'composer-install-drush':
+  cmd  => 'install',
+  cwd  => '/usr/share/drush',
+  user => 'root'
+}
+
