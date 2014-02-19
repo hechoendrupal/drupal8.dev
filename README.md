@@ -28,7 +28,7 @@ $ git clone --branch 8.x http://git.drupal.org/project/drupal.git drupal8.dev
 $ drush si standard --db-url=mysql://drupal:drupal@localhost/drupal --site-name=drupal8.dev --account-name=admin --account-pass=admin --account-mail=[user-email]
 ```
 
-* Using the GUI acccessing http://drupal8.dev
+* Using the GUI accessing http://drupal8.dev
 
 #### Tools on vm
 * composer
