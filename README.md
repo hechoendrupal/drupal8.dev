@@ -42,6 +42,6 @@ $ drush si standard --db-url=mysql://drupal:drupal@localhost/drupal --site-name=
 * Pass: drupal
 
 #### Minimum requirements
-* Git
-* VirtualBox 4.3.x
-* Vagrant 1.4.x
+* [Git](http://git-scm.com)
+* [VirtualBox 4.3.x](https://www.virtualbox.org)
+* [Vagrant 1.4.x](http://www.vagrantup.com)
