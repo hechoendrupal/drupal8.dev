@@ -60,11 +60,27 @@ apache:
         - rewrite
         - vhost_alias
     vhosts:
-        9turTSiM8aoL:
+        drupal8:
             servername: drupal8.dev
             serveraliases:
                 - www.drupal8.dev
             docroot: /var/www/drupal8.dev
+            port: '80'
+            override:
+                - All
+        drupal7:
+            servername: drupal7.dev
+            serveraliases:
+                - www.drupal7.dev
+            docroot: /var/www/drupal7.dev
+            port: '80'
+            override:
+                - All
+        symfony:
+            servername: symfony.dev
+            serveraliases:
+                - www.symfony.dev
+            docroot: /var/www/symfony.dev
             port: '80'
             override:
                 - All
@@ -84,6 +100,7 @@ php:
             - gd
             - intl
             - mcrypt
+            - xcache
         pear: {  }
         pecl:
             - APC
@@ -92,6 +109,7 @@ php:
         display_errors: On
         error_reporting: '-1'
         memory_limit: 256M
+        short_open_tag: Off
     timezone: America/Mexico_City
 xdebug:
     install: '1'
@@ -102,6 +120,7 @@ xdebug:
         xdebug.remote_enable: '1'
         xdebug.remote_handler: dbgp
         xdebug.remote_port: '9000'
+        xdebug.max_nesting_level: 250
 drush:
     install: '1'
     settings:
@@ -111,7 +130,7 @@ mysql:
     phpmyadmin: 0
     adminer: 0
     databases:
-        r5jmeKRcuzf4:
+        drupal:
             grant:
                 - ALL
             name: drupal
