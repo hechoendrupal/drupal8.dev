@@ -91,6 +91,7 @@ php:
     ini:
         display_errors: On
         error_reporting: '-1'
+        memory_limit: 256M
     timezone: America/Mexico_City
 xdebug:
     install: '1'
