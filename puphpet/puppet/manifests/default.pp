@@ -250,7 +250,6 @@ class { 'apache':
 
 if $::osfamily == 'debian' {
   case $apache_values['mpm_module'] {
-    'prefork': { ensure_packages( ['apache2-mpm-prefork'] ) }
     'worker':  { ensure_packages( ['apache2-mpm-worker'] ) }
     'event':   { ensure_packages( ['apache2-mpm-event'] ) }
   }
